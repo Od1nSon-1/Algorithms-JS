@@ -1,0 +1,93 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 20px;
+	font-weight: 400;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: #6C6C6C;
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+
+.block {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.block__matrix {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	column-gap: 20px;
+	margin-bottom: 20px;
+
+}
+
+.block__matrix-a {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.item-grid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.block__matrix-value {
+	font-size: 20px;
+	border: 1px solid black;
+	width: 3vw;
+	height: 5vh;
+	text-align: center;
+}
+
+
+.block__matrix-b {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.block__item {
+	display: flex;
+	column-gap: 10px;
+}
+
+#btn {
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 20px 20px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+.block__item-output {
+	text-align: center;
+	width: 180px;
+}
+
+.block__item-output h5 {
+	margin-bottom: 4px;
+
+}
