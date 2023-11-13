@@ -44,9 +44,15 @@ button {
 }
 
 .block__matrix-a {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
 
+
+}
+
+input { 
+	font-size: 20px ;
+	width: 8vw;
+	text-align: center;
+	height: 6vh;
 }
 
 .item-grid {
@@ -55,18 +61,9 @@ button {
 	justify-content: center;
 }
 
-.block__matrix-value {
-	font-size: 20px;
-	border: 1px solid black;
-	width: 3vw;
-	height: 5vh;
-	text-align: center;
-}
-
 
 .block__matrix-b {
-	display: grid;
-	grid-template-columns: 1fr;
+	
 }
 
 .block__item {
