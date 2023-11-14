@@ -2,8 +2,12 @@
 let tableA = document.getElementById("table-a")
 let tableB = document.getElementById("table-b")
 
-let resultGauss = document.getElementById("resultGauss")
-let resultZeidel = document.getElementById("resultZeidel")
+let resultGaussX0 = document.getElementById("resultGaussX0")
+let resultGaussX1 = document.getElementById("resultGaussX1")
+let resultGaussX2 = document.getElementById("resultGaussX2")
+let resultZeidelX0 = document.getElementById("resultZeidelX0")
+let resultZeidelX1 = document.getElementById("resultZeidelX1")
+let resultZeidelX2 = document.getElementById("resultZeidelX2")
 
 let btn = document.getElementById("btn")
 
@@ -102,8 +106,16 @@ btn.addEventListener("click", function () {
 	let x = createZeroFilledArray2(myArrayB.length)
 	let E = 0.01
 
-	resultZeidel.innerHTML = `<p>${getZeidel(myArrayA, myArrayB, x, E)}</p>`
-	resultGauss.innerHTML = `<p>${getGauss(myArrayA, myArrayB)}</p>`
+	let answerGauss = getGauss(myArrayA, myArrayB) 
+	let answerZeidel = getZeidel(myArrayA, myArrayB, x, E)
+
+	resultGaussX0.textContent = answerGauss[0]
+	resultGaussX1.textContent = answerGauss[1]
+	resultGaussX2.textContent = answerGauss[2]
+
+	resultZeidelX0.textContent = answerZeidel[0]
+	resultZeidelX1.textContent = answerZeidel[1]
+	resultZeidelX2.textContent = answerZeidel[2]
 
 	logArray(myArrayA)
 })
@@ -170,9 +182,9 @@ function getZeidel(a, b, x, E) {
 			}
 		}
 	}
-	let answer = ''
+	let answer = []
 	for (let i = 0; i < x.length; ++i) {
-		answer += "x" + i + " = " + x[i] + "\n"
+		answer.push("x" + i + " = " + x[i] + "\n")
 	}
 	return answer
 }
@@ -209,9 +221,9 @@ function getGauss(matrixA, matrixB) {
 				extMatrix[i][k] = extMatrix[i][k] - extMatrix[(rows - 1) - q][k] * v
 		}
 
-	let answer = ''
+	let answer = []
 	for (let i = 0; i < rows; i++) {
-		answer += "x" + i + " = " + extMatrix[i][columns - 1] + "\n"
+		answer.push("x" + i + " = " + extMatrix[i][columns - 1] + "\n")
 	}
 	return answer
 

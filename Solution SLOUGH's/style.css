@@ -69,7 +69,11 @@ input {
 .block__item {
 	display: flex;
 	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
 }
+
+
 
 #btn {
 	width: 100%;
@@ -81,10 +85,14 @@ input {
 
 .block__item-output {
 	text-align: center;
-	width: 180px;
+	width: 250px;
 }
 
 .block__item-output h5 {
 	margin-bottom: 4px;
 
+}
+
+.block__item-parag { 
+	text-align: left;
 }
