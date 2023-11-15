@@ -9,6 +9,8 @@ let resultZeidelX0 = document.getElementById("resultZeidelX0")
 let resultZeidelX1 = document.getElementById("resultZeidelX1")
 let resultZeidelX2 = document.getElementById("resultZeidelX2")
 
+let inputConvergense = document.getElementById("inputapp")
+
 let btn = document.getElementById("btn")
 
 
@@ -104,9 +106,9 @@ function logArray(array) {
 
 btn.addEventListener("click", function () {
 	let x = createZeroFilledArray2(myArrayB.length)
-	let E = 0.01
+	let E = inputConvergense.value
 
-	let answerGauss = getGauss(myArrayA, myArrayB) 
+	let answerGauss = getGauss(myArrayA, myArrayB)
 	let answerZeidel = getZeidel(myArrayA, myArrayB, x, E)
 
 	resultGaussX0.textContent = answerGauss[0]

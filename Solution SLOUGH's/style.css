@@ -21,6 +21,10 @@ button {
 }
 
 .container {
+	background-image: url(./image/bg-image.avif);
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	width: 100vw;
 	height: 100vh;
 	position: relative;
@@ -28,6 +32,10 @@ button {
 
 
 .block {
+	padding:15px ;
+	border: 10px solid rgb(24, 165, 252);
+	background-color:lightskyblue;
+	border-radius: 15px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -50,7 +58,7 @@ button {
 
 input { 
 	font-size: 20px ;
-	width: 8vw;
+	width: 5vw;
 	text-align: center;
 	height: 6vh;
 }
@@ -62,14 +70,9 @@ input {
 }
 
 
-.block__matrix-b {
-	
-}
-
 .block__item {
 	display: flex;
 	column-gap: 10px;
-	align-items: center;
 	justify-content: center;
 }
 
@@ -81,18 +84,40 @@ input {
 	padding: 20px 20px;
 	border-radius: 10px;
 	font-size: 20px;
+	background-color:rgb(152, 221, 230);
+	border: 5px solid rgb(103, 224, 240);
+	transition: all 0.25s ease-in;
+}
+
+#btn:hover { 
+	transform: translateY(-5px);
+	background-color:rgb(62, 224, 245);
 }
 
 .block__item-output {
+	border:3px dashed rgb(22, 97, 238);
+	background-color:cornflowerblue;
 	text-align: center;
 	width: 250px;
 }
 
 .block__item-output h5 {
+	font-size: 19px;
 	margin-bottom: 4px;
-
 }
 
-.block__item-parag { 
-	text-align: left;
+.block__item-output h6 { 
+	margin-bottom: 4px;
+	font-size: 16px;
+}
+
+.block__item-value { 
+	color :;
+	font-size: 20px;
+}
+
+.block__item-value input { 
+	width: 5.5vw;
+	font-size: 18px;
+	height: 4vh;
 }
