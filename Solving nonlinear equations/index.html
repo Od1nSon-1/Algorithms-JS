@@ -11,32 +11,37 @@
 
 <body>
 	<div class="container">
-		<div class="block">
-			<div class="block__charts">
-				<div id="chart1" class="block__charts-item">
-					<canvas id="myChart" width="200" height="200"></canvas>
+		<div class="slider">
+			<div class="block">
+				<div class="block__charts">
+					<div id="chart1" class="block__charts-item">
+						<canvas id="myChart" width="200" height="200"></canvas>
+					</div>
+					<div id="chart2" class="block__charts-item">
+						<canvas id="myChart2" width="200" height="200"></canvas>
+					</div>
 				</div>
-				<div id="chart2" class="block__charts-item">
-					<canvas id="myChart2" width="200" height="200"></canvas>
+				<div class="block__inputs">
+					<div class="block__input-value">
+						<div class="block__input-item">
+							<span>Х:</span>
+							<input id="x-value" type="text" value="1 2 3 4 5">
+						</div>
+						<div class="block__input-item">
+							<span>Y:</span>
+							<input id="y-value" type="text" value="1.5 1.75 1.83 1.87 1.9">
+						</div>
+						<div class="block__input-item">
+							<span>Шаг:</span>
+							<input id="step-value" type="text" value="0.01">
+						</div>
+					</div>
+					<button id="btn-play">Интерполировать!</button>
 				</div>
 			</div>
-			<div class="block__inputs">
-				<div class="block__input-value">
-					<div class="block__input-item">
-						<span>Х:</span>
-						<input id="x-value" type="text" value="1 2 3 4 5">
-					</div>
-					<div class="block__input-item">
-						<span>Y:</span>
-						<input id="y-value" type="text" value="1.5 1.75 1.83 1.87 1.9">
-					</div>
-					<div class="block__input-item">
-						<span>Шаг:</span>
-						<input id="step-value" type="text" value="0.01">
-					</div>
-				</div>
-				<button id="btn-play">Интерполировать!</button>
-			</div>
+			<div class="block">АНЯ НЕ МОЕТ ПОПУ </div>
+			<div> <img src="./image/arrow-right.png" alt="" class="next controlls"></div>
+			<div><img src="./image/arrow-right.png" alt="" class="prev controlls"></div>
 		</div>
 	</div>
 

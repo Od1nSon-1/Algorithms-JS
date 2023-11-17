@@ -1,5 +1,37 @@
-var ctx = document.getElementById('myChart').getContext('2d')
-var ctx2 = document.getElementById('myChart2').getContext('2d')
+const blocks = document.querySelectorAll(".block")
+const controlls = document.querySelectorAll(".controlls")
+let indexBlock = 0 
+
+
+function show(index) { 
+	blocks[indexBlock].classList.remove("active")
+	blocks[index].classList.add("active")
+	indexBlock = index
+}
+
+controlls.forEach((btn) => { 
+	btn.addEventListener("click", (event) => { 
+		if (event.target.classList.contains("prev")) { 
+			let index = indexBlock - 1 
+			if (index < 0) { 
+				index = blocks.length-1
+			}
+			show(index)
+		} else if (event.target.classList.contains("next")) { 
+			let index = indexBlock + 1 
+			if (index >= blocks.length) { 
+				index = 0 
+			}
+			show(index)
+		}
+	})
+})
+
+show(indexBlock)
+
+
+let ctx = document.getElementById('myChart').getContext('2d')
+let ctx2 = document.getElementById('myChart2').getContext('2d')
 
 let inputStep = document.getElementById("step-value")
 let xValue = document.getElementById("x-value")
@@ -12,8 +44,6 @@ let btnInterpolate = document.getElementById("btn-play")
 btnInterpolate.onclick = function () {
 	MakeCharts()
 }
-
-
 
 function MakeCharts() {
 	let xAxis = xValue.value.split("")
@@ -36,10 +66,6 @@ function MakeCharts() {
 	createChart(xInterValues, yInterValues, ctx2)
 
 }
-
-
-
-
 
 function createChart(xArray, yArray, canvasid) {
 	// Получаем контекст для рисования на холсте
@@ -74,8 +100,6 @@ function createChart(xArray, yArray, canvasid) {
 	})
 }
 
-
-
 function createZeroFilledArray2(length) {
 	var arr = []
 
@@ -85,7 +109,6 @@ function createZeroFilledArray2(length) {
 
 	return arr
 }
-
 
 function getInterpolatedValues(step, lowB, highB, valuesCount) {
 	let xAxis = createZeroFilledArray2(valuesCount)
@@ -110,9 +133,6 @@ function getLangragePolinomial(x, xValues, yValues, size) {
 	}
 	return lagrangePol
 }
-// Пример использования с двумя массивами
-
-
 
 function getNumbers(arr) {
 	for (let i = 0; i < arr.length; i++) {
